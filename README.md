@@ -1,10 +1,20 @@
 # GraphBind-UWU
 
-Ligand binding site prediction in proteins using graph neural networks.
+GraphBind-UWU predicts protein binding sites from structure graphs using an EGNN + Evoformer-style architecture. The project is built on PyTorch Geometric and ships with preprocessing, inference, visualization, and a standalone report.
 
-GraphBind-UWU is a GNN architecture built on top of PyTorch Geometric. It provides the source code, documentation, trained models and a robust explanation on the theory behind it.
+The current inference checkpoint is hosted on Hugging Face at [ManuelLabra/GraphBindUwU](https://huggingface.co/ManuelLabra/GraphBindUwU) as `graph_bind_uwu.pt`, so the model can be downloaded on demand instead of being bundled in the repository.
 
-The model is designed to predict ligand binding sites in proteins, which is a crucial task in drug discovery and structural biology. It takes as input a graph representation of a protein structure, where nodes represent amino acid residues and edges represent spatial proximity or chemical interactions. The model then processes this graph through a series of EGNN layers for geometry encoding, followed by Evoformer-style attention blocks with recycling to refine the predictions iteratively.
+## Report
+
+The write-up lives in [report/GraphBind.pdf](report/GraphBind.pdf). A short landing page is available in [report/Readme.md](report/Readme.md).
+
+## What This Repo Contains
+
+- A prediction entry point in `predict.py`
+- Conda environments for CPU/MPS and CUDA
+- Preprocessing and model code under `src/`
+- A report PDF in `report/GraphBind.pdf`
+- Visual assets and notebooks used during development
 
 ## Quick Start
 
@@ -36,6 +46,8 @@ This will:
 5. Open PyMOL with visualization (white = non-binding, red = binding)
 
 All outputs are saved to a temp folder (printed at runtime).
+
+If you already have the checkpoint locally, pass `--checkpoint /path/to/file.pt` to skip the download.
 
 **Options:**
 ```bash
