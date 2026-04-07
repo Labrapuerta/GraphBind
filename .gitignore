@@ -1,6 +1,5 @@
 /data
 pycache
-model/
 report/latex/
 graph_preprocessing.ipynb
 preprocess_data.ipynb
