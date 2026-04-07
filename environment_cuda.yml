@@ -1,0 +1,29 @@
+name: graphbind-cuda
+channels:
+  - pytorch
+  - nvidia
+  - pyg
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch=2.5
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8
+  - numpy<2
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - networkx
+  - biopython
+  - dssp
+  - pymol-open-source
+  - pip
+  - pip:
+    - py3Dmol
+    - wandb
+    - python-dotenv
+    - huggingface_hub
+    - torch_geometric

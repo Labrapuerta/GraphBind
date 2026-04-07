@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-bind-uwu"
+version = "0.1.0"
+description = "Ligand binding site prediction in proteins using graph neural networks"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src", "src.*"]
